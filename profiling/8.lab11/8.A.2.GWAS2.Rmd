@@ -305,6 +305,7 @@ phenotypes are used in the mvLMM analysis
 
 
 ```{r, eval=FALSE}
+install.packages("qqman")
 library(qqman)
 library("data.table")
 res <- fread("cache/Plant.height.assoc.txt")
@@ -372,7 +373,7 @@ for (j in 1:ncol(Z)){
 library(rrBLUP)
 map <- read.table("data/RiceDiversity_44K_Genotypes_PLINK/sativas413.map", header = FALSE, stringsAsFactors = FALSE)
 mygeno <- data.frame(marker=map[,2], chrom=map[,1], pos=map[,4], t(Z-1), check.names = FALSE) # Z = \in{-1, 0, 1}
-pheno <- read.delim("http://ricediversity.org/data/sets/44kgwas/RiceDiversity_44K_Phenotypes_34traits_PLINK.txt", header=TRUE)
+pheno <- read.delim("data/rice_44k_pheno.txt", header=TRUE)
 
 pheno$NSFTVID <- paste0("NSFTV_", pheno$NSFTVID)
 mypheno <- data.frame(NSFTV_ID=pheno$NSFTVID, y=pheno$Plant.height) 
