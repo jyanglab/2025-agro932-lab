@@ -305,6 +305,7 @@ phenotypes are used in the mvLMM analysis
 
 
 ```{r, eval=FALSE}
+install.packages("qqman")
 library(qqman)
 library("data.table")
 res <- fread("cache/Plant.height.assoc.txt")

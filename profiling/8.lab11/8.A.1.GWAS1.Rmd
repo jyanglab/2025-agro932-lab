@@ -46,7 +46,7 @@ https://developers.google.com/maps/documentation/embed/get-api-key
 
 ```{r}
 # you need to set up your own key:
-api_key <- ""
+api_key <- "AIzaSyA8zz34HsjNrQHrJLCVpEUh5gXISqmuVOI"
 register_google(key = api_key)
 
 mymap <- get_map(location=myloc, source="google", crop=FALSE, color="bw")
